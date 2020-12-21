@@ -1,0 +1,90 @@
+﻿@model IEnumerable<eRenting.Models.Empresa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col-sm mb-2 mb-sm-0">
+            <h1 class="page-header-title">Lista de Empresas</h1>
+        </div>
+        <div class="col-sm-auto">
+            <a class="btn btn-primary" href="/empresas/Create">
+                <i class="tio-user-add mr-1">Adicionar Empresa</i>  
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Morada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cod_postal_cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cod_postal_rua)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Localidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contacto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fax)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Morada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cod_postal_cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cod_postal_rua)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Localidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contacto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Empresa_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Empresa_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Empresa_id })
+        </td>
+    </tr>
+}
+
+</table>
