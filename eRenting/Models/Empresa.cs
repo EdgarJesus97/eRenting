@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -19,12 +20,15 @@ namespace eRenting.Models
         public string Morada { get; set; }
 
         [Required]
+        [Display(Name = "NIF")]
         public int Nif { get; set; }
 
         [Required]
+        [Display(Name = "Cód.Postal Cidade")]
         public int Cod_postal_cidade { get; set; }
 
         [Required]
+        [Display(Name = "Cód.Postal Rua")]
         public int Cod_postal_rua { get; set; }
 
         [Required]
