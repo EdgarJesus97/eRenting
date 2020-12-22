@@ -21,6 +21,7 @@ namespace eRenting.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Empresa> Empresa { get; set; }   
+        public DbSet<Funcionario> Funcionario { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

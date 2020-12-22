@@ -1,0 +1,75 @@
+﻿@model eRenting.Models.Funcionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="page-header">
+    <div class="row align-items-center">
+        <div class="col-sm mb-2 mb-sm-0">
+            <h1 class="page-header-title">@Model.Nome</h1>
+        </div>
+        <div class="col-sm-auto">
+            <a class="btn btn-primary" href="@Url.Action("index", "funcionarios")">
+                <i class="tio-user-add mr-1">Voltar</i>
+            </a>
+            <a class="btn btn-primary" href="@Url.Action("edit", "funcionarios" , new {  id = Model.Funcionario_id })">
+                <i class="tio-user-add mr-1">Editar</i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <hr />
+    <h4>Informação</h4>
+    <div class="dl-horizontal">
+        <div class="form-group row">
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+            </div>
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Contacto)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Contacto)
+                </dd>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+            </div>
+            <div class="col-md-2">
+                <dt>
+                    Empresa
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Empresa.Nome)
+                </dd>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
