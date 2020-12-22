@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using eRenting.Models;
+using eRenting.Models.ViewModels;
 
 namespace eRenting.Controllers
 {
@@ -27,12 +28,22 @@ namespace eRenting.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
+            
             Empresa empresa = db.Empresa.Find(id);
             if (empresa == null)
             {
                 return HttpNotFound();
             }
-            return View(empresa);
+            var query = (from fun in db.Funcionario
+                        where fun.Empresa.Empresa_id == id
+                        select new { Nome = fun.Nome , Contacto = fun.Contacto, Email = fun.Email, Funcionario_id = fun.Funcionario_id }).AsEnumerable()
+                        .Select(x => new Funcionario { Nome = x.Nome, Contacto = x.Contacto, Email = x.Email, Funcionario_id = x.Funcionario_id})
+                        .ToList();
+
+            var ve = new ViewEmpresa { Empresa = empresa, Funcionario = query};
+            
+            return View(ve);
         }
 
         // GET: Empresas/Create

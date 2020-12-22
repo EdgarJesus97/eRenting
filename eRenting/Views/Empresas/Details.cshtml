@@ -1,4 +1,4 @@
-﻿@model eRenting.Models.Empresa
+﻿@model eRenting.Models.ViewModels.ViewEmpresa
 
 @{
     ViewBag.Title = "Details";
@@ -6,13 +6,13 @@
 <div class="page-header">
     <div class="row align-items-center">
         <div class="col-sm mb-2 mb-sm-0">
-            <h1 class="page-header-title">@Model.Nome</h1>
+            <h1 class="page-header-title">@Model.Empresa.Nome</h1>
         </div>
         <div class="col-sm-auto">
             <a class="btn btn-primary" href="@Url.Action("index", "Empresas")">
                 <i class="tio-user-add mr-1">Voltar</i>
             </a>
-            <a class="btn btn-primary" href="@Url.Action("edit", "Empresas" , new {  id = Model.Empresa_id })">
+            <a class="btn btn-primary" href="@Url.Action("edit", "Empresas" , new {  id = Model.Empresa.Empresa_id })">
                 <i class="tio-user-add mr-1">Editar</i>
             </a>
         </div>
@@ -27,100 +27,100 @@
         <div class="form-group row">
             <div class="col-md-2">
                 <dt>
-                    @Html.DisplayNameFor(model => model.Nome)
+                    @Html.DisplayNameFor(model => model.Empresa.Nome)
                 </dt>
             </div>
             <div class="col-md-4">
                 <dd>
-                    @Html.DisplayFor(model => model.Nome)
+                    @Html.DisplayFor(model => model.Empresa.Nome)
                 </dd>
             </div>
             <div class="col-md-2">
                 <dt>
-                    @Html.DisplayNameFor(model => model.Morada)
+                    @Html.DisplayNameFor(model => model.Empresa.Morada)
                 </dt>
             </div>
             <div class="col-md-4">
                 <dd>
-                    @Html.DisplayFor(model => model.Morada)
-                </dd>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-2">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Nif)
-                </dt>
-            </div>
-            <div class="col-md-4">
-                <dd>
-                    @Html.DisplayFor(model => model.Nif)
-                </dd>
-            </div>
-            <div class="col-md-2">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Contacto)
-                </dt>
-            </div>
-            <div class="col-md-4">
-                <dd>
-                    @Html.DisplayFor(model => model.Contacto)
+                    @Html.DisplayFor(model => model.Empresa.Morada)
                 </dd>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-2">
                 <dt>
-                    @Html.DisplayNameFor(model => model.Cod_postal_cidade)
+                    @Html.DisplayNameFor(model => model.Empresa.Nif)
                 </dt>
             </div>
             <div class="col-md-4">
                 <dd>
-                    @Html.DisplayFor(model => model.Cod_postal_cidade)
+                    @Html.DisplayFor(model => model.Empresa.Nif)
                 </dd>
             </div>
             <div class="col-md-2">
                 <dt>
-                    @Html.DisplayNameFor(model => model.Cod_postal_rua)
+                    @Html.DisplayNameFor(model => model.Empresa.Contacto)
                 </dt>
             </div>
             <div class="col-md-4">
                 <dd>
-                    @Html.DisplayFor(model => model.Cod_postal_rua)
-                </dd>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-2">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Localidade)
-                </dt>
-            </div>
-            <div class="col-md-4">
-                <dd>
-                    @Html.DisplayFor(model => model.Localidade)
-                </dd>
-            </div>
-            <div class="col-md-2">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Fax)
-                </dt>
-            </div>
-            <div class="col-md-4">
-                <dd>
-                    @Html.DisplayFor(model => model.Fax)
+                    @Html.DisplayFor(model => model.Empresa.Contacto)
                 </dd>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-2">
                 <dt>
-                    @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.Empresa.Cod_postal_cidade)
                 </dt>
             </div>
             <div class="col-md-4">
                 <dd>
-                    @Html.DisplayFor(model => model.Email)
+                    @Html.DisplayFor(model => model.Empresa.Cod_postal_cidade)
+                </dd>
+            </div>
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Empresa.Cod_postal_rua)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Empresa.Cod_postal_rua)
+                </dd>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Empresa.Localidade)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Empresa.Localidade)
+                </dd>
+            </div>
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Empresa.Fax)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Empresa.Fax)
+                </dd>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-2">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Empresa.Email)
+                </dt>
+            </div>
+            <div class="col-md-4">
+                <dd>
+                    @Html.DisplayFor(model => model.Empresa.Email)
                 </dd>
             </div>
         </div>
@@ -129,19 +129,25 @@
     </div>
     <hr />
     <h4>Sócios</h4>
-    <div class="dl-horizontal">
-        <div class="form-group row">
-            <div class="col-md-2">
-                <dt>
-                    @Html.DisplayNameFor(model => model.Email)
-                </dt>
-            </div>
-            <div class="col-md-4">
-                <dd>
-                    @Html.DisplayFor(model => model.Email)
-                </dd>
-            </div>
-        </div>
-    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Contacto</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fun in Model.Funcionario)
+            {
+            <tr>
+                <th>@Html.DisplayFor(nome => fun.Nome)</th>
+                <th>@Html.DisplayFor(contacto => fun.Contacto)</th>
+                <th>@Html.DisplayFor(contacto => fun.Email)</th>
+                <th> @Html.ActionLink("Informação", "Details", "funcionarios" , new { id = fun.Funcionario_id }, null)</th>
+            </tr>
+            }
+        </tbody>
+    </table>
 
 </div>
