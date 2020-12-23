@@ -21,6 +21,6 @@ namespace eRenting.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        public Empresa Empresa { get; set; }
+        public virtual Empresa Empresa { get; set; }
     }
 }

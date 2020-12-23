@@ -1,4 +1,4 @@
-﻿@model eRenting.Models.Funcionario
+﻿@model eRenting.Models.ViewModels.CreateFuncionario
 
 @{
     ViewBag.Title = "Create";
@@ -18,34 +18,39 @@
 </div>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group row">
-            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Funcionario.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Funcionario.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Funcionario.Nome, "", new { @class = "text-danger" })
             </div>
-            @Html.LabelFor(model => model.Contacto, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Funcionario.Contacto, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.EditorFor(model => model.Contacto, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Contacto, "", new { @class = "text-danger" })
-            </div>
-        </div>     
-        <div class="form-group row">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Funcionario.Contacto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Funcionario.Contacto, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Funcionario.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Funcionario.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Funcionario.Email, "", new { @class = "text-danger" })
+            </div>
+            @Html.LabelFor(model => model.Funcionario.Empresa, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(model => model.Funcionario.Empresa, new SelectList(Model.ListEmpresa,"Empresa_id", "Nome"),"Selecione uma empresa", new { @class = "form-control", data_required = "true" })
+                @Html.ValidationMessageFor(model => model.Funcionario.Empresa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
         <div class="form-group row">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Adicionar" class="btn btn-primary" />
@@ -53,7 +58,6 @@
         </div>
     </div>
 }
-
 
 
 @section Scripts {

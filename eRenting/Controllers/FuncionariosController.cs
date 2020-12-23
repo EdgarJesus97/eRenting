@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using eRenting.Models;
+using eRenting.Models.ViewModels;
 
 namespace eRenting.Controllers
 {
@@ -41,7 +42,11 @@ namespace eRenting.Controllers
         // GET: Funcionarios/Create
         public ActionResult Create()
         {
-            return View();
+
+            var query = db.Empresa.ToList();
+
+            var cf = new CreateFuncionario { ListEmpresa = query.ToList() };
+            return View(cf);
         }
 
         // POST: Funcionarios/Create
@@ -49,10 +54,11 @@ namespace eRenting.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Funcionario_id,Nome,Contacto,Email")] Funcionario funcionario)
+        public ActionResult Create([Bind(Include = "Funcionario_id,Nome,Contacto,Email,Empresa")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
-            {
+            { 
+                
                 db.Funcionario.Add(funcionario);
                 db.SaveChanges();
                 return RedirectToAction("Index");
