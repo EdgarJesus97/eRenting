@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace eRenting.Models
 {
@@ -10,6 +12,9 @@ namespace eRenting.Models
     {
         [Key]
         public int Funcionario_id { get; set; }
+
+        [ForeignKey("Empresa")]
+        public int Empresa_id { get; set; }
 
         [Required]
         [StringLength(120)]
@@ -21,6 +26,6 @@ namespace eRenting.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-        public virtual Empresa Empresa { get; set; }
+        public Empresa Empresa { get; set; }
     }
 }

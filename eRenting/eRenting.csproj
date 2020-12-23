@@ -192,12 +192,57 @@
     <Compile Include="Migrations\202012212352016_FuncionarioModel.Designer.cs">
       <DependentUpon>202012212352016_FuncionarioModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012231552117_AddEmpresa.cs" />
+    <Compile Include="Migrations\202012231552117_AddEmpresa.Designer.cs">
+      <DependentUpon>202012231552117_AddEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231610510_AddEmpresasCollection1.cs" />
+    <Compile Include="Migrations\202012231610510_AddEmpresasCollection1.Designer.cs">
+      <DependentUpon>202012231610510_AddEmpresasCollection1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231624318_AddEmpresasCollection2.cs" />
+    <Compile Include="Migrations\202012231624318_AddEmpresasCollection2.Designer.cs">
+      <DependentUpon>202012231624318_AddEmpresasCollection2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231638109_AddEmpresasCollection3.cs" />
+    <Compile Include="Migrations\202012231638109_AddEmpresasCollection3.Designer.cs">
+      <DependentUpon>202012231638109_AddEmpresasCollection3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231731229_VeiculoModel.cs" />
+    <Compile Include="Migrations\202012231731229_VeiculoModel.Designer.cs">
+      <DependentUpon>202012231731229_VeiculoModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231742253_CombustivelModel.cs" />
+    <Compile Include="Migrations\202012231742253_CombustivelModel.Designer.cs">
+      <DependentUpon>202012231742253_CombustivelModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231747046_CategoriaModel.cs" />
+    <Compile Include="Migrations\202012231747046_CategoriaModel.Designer.cs">
+      <DependentUpon>202012231747046_CategoriaModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231752066_StatusModel.cs" />
+    <Compile Include="Migrations\202012231752066_StatusModel.Designer.cs">
+      <DependentUpon>202012231752066_StatusModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231800388_AddVeiculo_FK.cs" />
+    <Compile Include="Migrations\202012231800388_AddVeiculo_FK.Designer.cs">
+      <DependentUpon>202012231800388_AddVeiculo_FK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012231816127_ClienteModel.cs" />
+    <Compile Include="Migrations\202012231816127_ClienteModel.Designer.cs">
+      <DependentUpon>202012231816127_ClienteModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CategoriaVeiculo.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Combustivel.cs" />
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Models\ViewModels\CreateFuncionario.cs" />
     <Compile Include="Models\ViewModels\ViewEmpresa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -403,6 +448,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012212352016_FuncionarioModel.resx">
       <DependentUpon>202012212352016_FuncionarioModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231552117_AddEmpresa.resx">
+      <DependentUpon>202012231552117_AddEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231610510_AddEmpresasCollection1.resx">
+      <DependentUpon>202012231610510_AddEmpresasCollection1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231624318_AddEmpresasCollection2.resx">
+      <DependentUpon>202012231624318_AddEmpresasCollection2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231638109_AddEmpresasCollection3.resx">
+      <DependentUpon>202012231638109_AddEmpresasCollection3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231731229_VeiculoModel.resx">
+      <DependentUpon>202012231731229_VeiculoModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231742253_CombustivelModel.resx">
+      <DependentUpon>202012231742253_CombustivelModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231747046_CategoriaModel.resx">
+      <DependentUpon>202012231747046_CategoriaModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231752066_StatusModel.resx">
+      <DependentUpon>202012231752066_StatusModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231800388_AddVeiculo_FK.resx">
+      <DependentUpon>202012231800388_AddVeiculo_FK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012231816127_ClienteModel.resx">
+      <DependentUpon>202012231816127_ClienteModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

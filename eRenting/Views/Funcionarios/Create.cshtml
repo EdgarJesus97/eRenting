@@ -44,10 +44,10 @@
                 @Html.EditorFor(model => model.Funcionario.Email, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Funcionario.Email, "", new { @class = "text-danger" })
             </div>
-            @Html.LabelFor(model => model.Funcionario.Empresa, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Funcionario.Empresa_id, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-4">
-                @Html.DropDownListFor(model => model.Funcionario.Empresa, new SelectList(Model.ListEmpresa,"Empresa_id", "Nome"),"Selecione uma empresa", new { @class = "form-control", data_required = "true" })
-                @Html.ValidationMessageFor(model => model.Funcionario.Empresa, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.Funcionario.Empresa_id, new SelectList(Model.ListEmpresa,"Empresa_id", "Nome"),"Selecione uma empresa", new { @class = "form-control", data_required = "true" })
+                @Html.ValidationMessageFor(model => model.Funcionario.Empresa_id, "", new { @class = "text-danger" })
             </div>
         </div>
         

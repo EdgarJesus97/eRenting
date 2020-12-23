@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
 namespace eRenting.Models
 {
-    public class Empresa
+    public class Cliente
     {
         [Key]
-        public int Empresa_id { get; set; }
+        public int Cliente_id { get; set; }
 
         [Required]
-        [StringLength(120)]
-        public string Nome { get; set; }
+        [StringLength(50)]
+        [Display(Name = "Primeiro Nome")]
+        public string primeiro_nome { get; set; }
 
         [Required]
-        public string Morada { get; set; }
-
-        [Required]
-        [Display(Name = "NIF")]
-        public int Nif { get; set; }
+        public int NIF { get; set; }
 
         [Required]
         [Display(Name = "Cód.Postal Cidade")]
@@ -38,11 +34,8 @@ namespace eRenting.Models
         [RegularExpression("([0-9]{9})", ErrorMessage = "O número de telefone não é válido!")]
         public int Contacto { get; set; }
 
-        public int Fax { get; set; }
-
         [StringLength(120)]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
-
     }
 }

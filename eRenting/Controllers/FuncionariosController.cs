@@ -54,7 +54,7 @@ namespace eRenting.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Funcionario_id,Nome,Contacto,Email,Empresa")] Funcionario funcionario)
+        public ActionResult Create([Bind(Include = "Funcionario_id,Nome,Contacto,Email,Empresa_id")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
             { 

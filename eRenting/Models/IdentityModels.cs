@@ -22,6 +22,16 @@ namespace eRenting.Models
     {
         public DbSet<Empresa> Empresa { get; set; }   
         public DbSet<Funcionario> Funcionario { get; set; }
+
+        public DbSet<Veiculo> Veiculo { get; set; }
+        
+        public DbSet<Combustivel> Combustivel { get; set; }
+        
+        public DbSet<CategoriaVeiculo> CategoriaVeiculo { get; set; }
+
+        public DbSet<Status> Status { get; set; }
+
+        public DbSet<Cliente> Cliente { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
