@@ -232,16 +232,40 @@
     <Compile Include="Migrations\202012231816127_ClienteModel.Designer.cs">
       <DependentUpon>202012231816127_ClienteModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012232033469_EntregaModel.cs" />
+    <Compile Include="Migrations\202012232033469_EntregaModel.Designer.cs">
+      <DependentUpon>202012232033469_EntregaModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012232040434_RecebimentoModel.cs" />
+    <Compile Include="Migrations\202012232040434_RecebimentoModel.Designer.cs">
+      <DependentUpon>202012232040434_RecebimentoModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012232043337_StatusReservaModel.cs" />
+    <Compile Include="Migrations\202012232043337_StatusReservaModel.Designer.cs">
+      <DependentUpon>202012232043337_StatusReservaModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012232110005_ReservaModel.cs" />
+    <Compile Include="Migrations\202012232110005_ReservaModel.Designer.cs">
+      <DependentUpon>202012232110005_ReservaModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012232112012_AddReserva_FKVeiculo.cs" />
+    <Compile Include="Migrations\202012232112012_AddReserva_FKVeiculo.Designer.cs">
+      <DependentUpon>202012232112012_AddReserva_FKVeiculo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CategoriaVeiculo.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Combustivel.cs" />
     <Compile Include="Models\Empresa.cs" />
+    <Compile Include="Models\Entrega.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Recebimento.cs" />
+    <Compile Include="Models\Reserva.cs" />
     <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\StatusReserva.cs" />
     <Compile Include="Models\Veiculo.cs" />
     <Compile Include="Models\ViewModels\CreateFuncionario.cs" />
     <Compile Include="Models\ViewModels\ViewEmpresa.cs" />
@@ -478,6 +502,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012231816127_ClienteModel.resx">
       <DependentUpon>202012231816127_ClienteModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012232033469_EntregaModel.resx">
+      <DependentUpon>202012232033469_EntregaModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012232040434_RecebimentoModel.resx">
+      <DependentUpon>202012232040434_RecebimentoModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012232043337_StatusReservaModel.resx">
+      <DependentUpon>202012232043337_StatusReservaModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012232110005_ReservaModel.resx">
+      <DependentUpon>202012232110005_ReservaModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012232112012_AddReserva_FKVeiculo.resx">
+      <DependentUpon>202012232112012_AddReserva_FKVeiculo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

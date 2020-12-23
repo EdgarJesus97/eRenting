@@ -32,6 +32,14 @@ namespace eRenting.Models
         public DbSet<Status> Status { get; set; }
 
         public DbSet<Cliente> Cliente { get; set; }
+
+        public DbSet<Entrega> Entrega { get; set; }
+
+        public DbSet<Recebimento> Recebimento { get; set; }
+
+        public DbSet<StatusReserva> StatusReserva { get; set; }
+
+        public DbSet<Reserva> Reserva { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

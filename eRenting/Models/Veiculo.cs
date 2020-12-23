@@ -53,7 +53,6 @@ namespace eRenting.Models
         [Display(Name = "Lotação")]
         public int Locatacao { get; set; }
 
-        [Required]
         [Display(Name = "Observações Especiais")]
         [StringLength(250)]
         public string Observacoes { get; set; }
@@ -81,5 +80,7 @@ namespace eRenting.Models
 
         [ForeignKey("Empresa")]
         public int Empresa_id { get; set; }
+
+        //falta foto
     }
 }
